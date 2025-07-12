@@ -38,7 +38,7 @@ const TrustSection = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">
                 {stat.number}
               </div>
               <div className="text-gray-600">{stat.label}</div>
@@ -59,8 +59,8 @@ const TrustSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="text-center">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-6 h-6 text-primary-600" />
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-6 h-6 text-purple-600" />
                              </div>
               <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
               <p className="text-gray-600 text-sm">{feature.description}</p>

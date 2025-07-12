@@ -88,7 +88,7 @@ const FeaturedArtisans = () => {
                   <h3 className="font-semibold text-lg">{artisan.name}</h3>
                   <p className="text-sm text-gray-600">{artisan.service}</p>
                   {artisan.verified && (
-                    <span className="inline-flex items-center text-xs text-primary-600 mt-1">
+                    <span className="inline-flex items-center text-xs text-purple-600 mt-1">
                       ✓ Verified
                     </span>
                   )}

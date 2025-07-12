@@ -19,12 +19,12 @@ const Hero = () => {
   ]
 
   return (
-    <section className="bg-gradient-to-br from-primary-50 to-white py-16 md:py-24">
+    <section className="bg-gradient-to-br from-purple-50 via-pink-50 to-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Find Trusted Artisans in{' '}
-            <span className="text-primary-600">Minutes</span>
+            <span className="text-purple-600">Minutes</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Connect with verified professionals for all your home and office repairs
