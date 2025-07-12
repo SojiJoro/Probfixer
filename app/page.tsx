@@ -152,7 +152,7 @@ export default function Home() {
                       </svg>
                     ))}
                   </div>
-                  <p className="testimonial-text">"{testimonial.text}"</p>
+                  <p className="testimonial-text">&ldquo;{testimonial.text}&rdquo;</p>
                   <div>
                     <p className="testimonial-name">{testimonial.name}</p>
                     <p className="testimonial-location">{testimonial.location}</p>
