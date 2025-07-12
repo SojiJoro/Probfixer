@@ -464,7 +464,7 @@ const SearchBar = ({
               onClick={handleSearch}
               className="w-full text-left px-4 py-3 bg-gray-50 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none text-green-600 font-medium border-t"
             >
-              View all results for "{query}"
+              View all results for &quot;{query}&quot;
             </button>
           )}
         </div>
