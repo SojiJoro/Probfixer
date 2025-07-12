@@ -3,23 +3,18 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { 
-  Menu, 
-  X, 
-  Home, 
-  Search, 
-  Briefcase, 
-  User, 
+  Menu,
+  X,
+  Home,
+  Search,
+  Briefcase,
+  User,
   MessageSquare,
-  Bell,
   Settings,
   LogOut,
   ChevronRight,
-  MapPin,
   Phone,
-  Mail,
-  Shield,
   HelpCircle,
-  FileText,
   Star,
   PlusCircle
 } from 'lucide-react'

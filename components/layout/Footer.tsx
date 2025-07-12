@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="font-bold text-xl">ProbFixer</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Nigeria's trusted marketplace for home and office repairs.
+              Nigeria&apos;s trusted marketplace for home and office repairs.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">

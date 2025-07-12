@@ -1,5 +1,4 @@
-import { Star, MapPin, Clock, CheckCircle, Phone, Mail, Calendar, Award, Shield, Briefcase } from 'lucide-react'
-import Link from 'next/link'
+import { Star, MapPin, CheckCircle, Phone, Mail, Calendar, Award, Shield } from 'lucide-react'
 
 interface ArtisanProfileProps {
   artisan: {
