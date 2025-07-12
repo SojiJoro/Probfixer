@@ -115,7 +115,7 @@ const ArtisanProfile = ({ artisan }: ArtisanProfileProps) => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <div className="text-center p-3 bg-gray-50 rounded-lg">
                 <div className="flex items-center justify-center gap-1 text-yellow-500 mb-1">
-                  <Star className="w-5 h-5 fill-current" />
+                  <Star className="w-[4px] h-[4px] fill-current" />
                   <span className="text-xl font-bold text-gray-900">{artisan.rating.toFixed(1)}</span>
                 </div>
                 <p className="text-sm text-gray-600">{artisan.reviews} reviews</p>
@@ -249,9 +249,9 @@ const ArtisanProfile = ({ artisan }: ArtisanProfileProps) => {
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
-                        <Star 
-                          key={i} 
-                          className={`w-4 h-4 ${i < review.rating ? 'fill-current' : 'fill-none'}`} 
+                        <Star
+                          key={i}
+                          className={`w-[3px] h-[3px] ${i < review.rating ? 'fill-current' : 'fill-none'}`}
                         />
                       ))}
                     </div>
