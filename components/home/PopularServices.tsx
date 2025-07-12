@@ -35,7 +35,7 @@ const PopularServices = () => {
               className="bg-white rounded-xl p-6 hover:shadow-md transition-shadow text-center group"
             >
               <div className="text-4xl mb-3">{service.icon}</div>
-              <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
                 {service.name}
               </h3>
               <p className="text-sm text-gray-500 mt-1">

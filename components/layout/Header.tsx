@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">P</span>
             </div>
             <span className="font-bold text-xl">ProbFixer</span>
@@ -21,13 +21,13 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/browse" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/browse" className="text-gray-700 hover:text-purple-600 transition-colors">
               Find Artisans
             </Link>
-            <Link href="/how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/how-it-works" className="text-gray-700 hover:text-purple-600 transition-colors">
               How it Works
             </Link>
-            <Link href="/post-problem" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/post-problem" className="text-gray-700 hover:text-purple-600 transition-colors">
               Post a Job
             </Link>
           </nav>
@@ -56,13 +56,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              <Link href="/browse" className="text-gray-700 hover:text-primary-600">
+              <Link href="/browse" className="text-gray-700 hover:text-purple-600">
                 Find Artisans
               </Link>
-              <Link href="/how-it-works" className="text-gray-700 hover:text-primary-600">
+              <Link href="/how-it-works" className="text-gray-700 hover:text-purple-600">
                 How it Works
               </Link>
-              <Link href="/post-problem" className="text-gray-700 hover:text-primary-600">
+              <Link href="/post-problem" className="text-gray-700 hover:text-purple-600">
                 Post a Job
               </Link>
               <hr className="my-2" />

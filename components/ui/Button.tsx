@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
   const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50'
   
   const variants = {
-    primary: 'bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-600',
+    primary: 'bg-purple-600 text-white hover:bg-purple-700 focus-visible:ring-purple-600',
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus-visible:ring-gray-400',
     outline: 'border border-gray-300 bg-transparent hover:bg-gray-100 focus-visible:ring-gray-400',
     ghost: 'hover:bg-gray-100 hover:text-gray-900 focus-visible:ring-gray-400'
