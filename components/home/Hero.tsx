@@ -19,7 +19,7 @@ const Hero = () => {
   ]
 
   return (
-    <section className="bg-gradient-to-br from-primary-50 to-white py-16 md:py-24">
+    <section className="bg-gradient-to-br from-primary-200 to-primary-50 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">

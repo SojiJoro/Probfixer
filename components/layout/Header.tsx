@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -21,20 +21,20 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/browse" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/browse" className="text-white hover:text-white/90 transition-colors">
               Find Artisans
             </Link>
-            <Link href="/how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/how-it-works" className="text-white hover:text-white/90 transition-colors">
               How it Works
             </Link>
-            <Link href="/post-problem" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/post-problem" className="text-white hover:text-white/90 transition-colors">
               Post a Job
             </Link>
           </nav>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" className="flex items-center gap-2">
+            <Button variant="ghost" className="flex items-center gap-2 text-white hover:text-white">
               <User className="w-4 h-4" />
               Sign In
             </Button>
@@ -54,22 +54,22 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t">
+          <div className="md:hidden py-4 border-t bg-primary-600 text-white">
             <nav className="flex flex-col space-y-4">
-              <Link href="/browse" className="text-gray-700 hover:text-primary-600">
+              <Link href="/browse" className="text-white hover:text-white/90">
                 Find Artisans
               </Link>
-              <Link href="/how-it-works" className="text-gray-700 hover:text-primary-600">
+              <Link href="/how-it-works" className="text-white hover:text-white/90">
                 How it Works
               </Link>
-              <Link href="/post-problem" className="text-gray-700 hover:text-primary-600">
+              <Link href="/post-problem" className="text-white hover:text-white/90">
                 Post a Job
               </Link>
               <hr className="my-2" />
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="w-full bg-white text-primary-600">
                 Sign In
               </Button>
-              <Button className="w-full">
+              <Button className="w-full bg-white text-primary-600">
                 Join as Artisan
               </Button>
             </nav>
