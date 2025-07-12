@@ -833,3 +833,135 @@
     transition-duration: 0.01ms !important;
   }
 }
+@layer components {
+  /* === Homepage CTA Section === */
+  .home-cta-section {
+    @apply py-16 bg-accent text-white text-center;
+  }
+
+  .home-cta-heading {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .home-cta-subtext {
+    @apply text-xl text-accent-light mb-8 max-w-2xl mx-auto;
+  }
+
+  .btn-home-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-white text-accent rounded-lg font-semibold hover:bg-gray-100 transition-colors;
+  }
+
+  .btn-home-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-accent transition-colors;
+  }
+
+  /* === Stats Section === */
+  .home-stats-section {
+    @apply py-16 bg-muted;
+  }
+
+  .stat-block {
+    @apply text-center;
+  }
+
+  .stat-number {
+    @apply text-4xl font-bold text-foreground mb-2;
+  }
+
+  .stat-label {
+    @apply text-muted-foreground;
+  }
+
+  /* === Mobile App Section === */
+  .home-mobile-section {
+    @apply py-16;
+  }
+
+  .app-highlight-box {
+    @apply bg-gradient-to-br from-accent-light to-accent p-8 rounded-3xl;
+  }
+
+  .feature-item {
+    @apply flex items-center gap-3;
+  }
+
+  .feature-icon-wrapper {
+    @apply w-12 h-12 bg-accent-light rounded-lg flex items-center justify-center;
+  }
+
+  .feature-icon {
+    @apply w-6 h-6 text-accent;
+  }
+
+  /* === Testimonials === */
+  .testimonials-section {
+    @apply py-16 bg-muted;
+  }
+
+  .testimonial-heading {
+    @apply text-3xl md:text-4xl font-bold text-center text-foreground mb-12;
+  }
+
+  .home-testimonial-card {
+    @apply bg-white rounded-xl p-6 shadow-sm;
+  }
+
+  .testimonial-stars {
+    @apply flex mb-4;
+  }
+
+  .testimonial-text {
+    @apply text-muted-foreground mb-4;
+  }
+
+  .testimonial-name {
+    @apply font-semibold text-foreground;
+  }
+
+  .testimonial-location {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* === FAQ Section === */
+  .faq-section {
+    @apply py-16;
+  }
+
+  .faq-heading {
+    @apply text-3xl md:text-4xl font-bold text-center text-foreground mb-12;
+  }
+
+  .faq-item {
+    @apply group bg-muted rounded-lg;
+  }
+
+  .faq-summary {
+    @apply flex justify-between items-center cursor-pointer p-6 hover:bg-muted-foreground/10 transition-colors rounded-lg;
+  }
+
+  .faq-question {
+    @apply font-semibold text-foreground;
+  }
+
+  .faq-answer {
+    @apply px-6 pb-6 text-muted-foreground;
+  }
+
+  /* === Join as Artisan Section === */
+  .artisan-cta-section {
+    @apply py-16 bg-gradient-to-br from-foreground to-muted-foreground text-white text-center;
+  }
+
+  .artisan-cta-heading {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .artisan-cta-subtext {
+    @apply text-xl text-muted mb-8 max-w-2xl mx-auto;
+  }
+
+  .btn-join-artisan {
+    @apply inline-flex items-center justify-center px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent-light transition-colors;
+  }
+}
+
