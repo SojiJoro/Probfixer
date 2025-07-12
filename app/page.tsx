@@ -6,6 +6,7 @@ import PopularServices from '@/components/home/PopularServices'
 import TrustSection from '@/components/home/TrustSection'
 import Footer from '@/components/layout/Footer'
 
+
 export default function Home() {
   return (
     <>
