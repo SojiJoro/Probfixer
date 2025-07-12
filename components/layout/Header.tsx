@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary-600 to-secondary text-white">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary-600 to-secondary-600 text-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}

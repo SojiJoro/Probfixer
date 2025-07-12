@@ -32,7 +32,7 @@ const TrustSection = () => {
   ]
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-r from-white to-primary-50">
       <div className="container mx-auto px-4">
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">

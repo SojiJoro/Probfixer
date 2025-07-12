@@ -44,7 +44,7 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gradient-to-r from-white to-primary-50">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -136,7 +136,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gradient-to-r from-primary-50 to-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
               What Our Customers Say
@@ -210,8 +210,8 @@ export default function Home() {
                   answer: "We have a satisfaction guarantee. If you're not happy with the work, contact our support team and we'll help resolve the issue."
                 }
               ].map((faq, index) => (
-                <details key={index} className="group bg-gray-50 rounded-lg">
-                  <summary className="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-100 transition-colors rounded-lg">
+                <details key={index} className="group bg-white/80 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-6 hover:bg-white transition-colors rounded-lg">
                     <span className="font-semibold text-gray-900">{faq.question}</span>
                     <span className="text-gray-400 group-open:rotate-180 transition-transform">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

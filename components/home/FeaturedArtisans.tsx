@@ -55,7 +55,7 @@ const FeaturedArtisans = () => {
   ]
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-r from-primary-50 to-white">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <div>
