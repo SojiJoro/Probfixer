@@ -23,11 +23,11 @@ const RatingStars = ({
 }: RatingStarsProps) => {
   // Size mappings
   const sizes = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-8 h-8'
+    xs: 'w-[2px] h-[2px]',
+    sm: 'w-[3px] h-[3px]',
+    md: 'w-[4px] h-[4px]',
+    lg: 'w-[5px] h-[5px]',
+    xl: 'w-[6px] h-[6px]'
   }
 
   const textSizes = {
@@ -114,11 +114,11 @@ export const SimpleRatingStars = ({
   className = '' 
 }: Pick<RatingStarsProps, 'rating' | 'size' | 'className'>) => {
   const sizes = {
-    xs: 'w-3 h-3',
-    sm: 'w-4 h-4',
-    md: 'w-5 h-5',
-    lg: 'w-6 h-6',
-    xl: 'w-8 h-8'
+    xs: 'w-[2px] h-[2px]',
+    sm: 'w-[3px] h-[3px]',
+    md: 'w-[4px] h-[4px]',
+    lg: 'w-[5px] h-[5px]',
+    xl: 'w-[6px] h-[6px]'
   }
 
   return (
@@ -154,9 +154,9 @@ export const RatingDisplay = ({
   className?: string
 }) => {
   const sizeStyles = {
-    sm: { star: 'w-4 h-4', text: 'text-sm' },
-    md: { star: 'w-5 h-5', text: 'text-base' },
-    lg: { star: 'w-6 h-6', text: 'text-lg' }
+    sm: { star: 'w-[3px] h-[3px]', text: 'text-sm' },
+    md: { star: 'w-[4px] h-[4px]', text: 'text-base' },
+    lg: { star: 'w-[5px] h-[5px]', text: 'text-lg' }
   }
 
   if (variant === 'compact') {
@@ -214,7 +214,7 @@ export const RatingStats = ({
           <div key={stars} className="flex items-center gap-3">
             <div className="flex items-center gap-1 w-16">
               <span className="text-sm text-gray-600">{stars}</span>
-              <Star className="w-4 h-4 text-yellow-400 fill-current" />
+              <Star className="w-[3px] h-[3px] text-yellow-400 fill-current" />
             </div>
             <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
               <div 

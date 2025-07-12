@@ -65,15 +65,15 @@ const ArtisanCard = ({ artisan }: ArtisanCardProps) => {
         <div className="flex items-center gap-1">
           <div className="flex text-yellow-400">
             {[...Array(5)].map((_, i) => (
-              <Star 
-                key={i} 
-                className={`w-4 h-4 ${
-                  i < Math.floor(artisan.rating) 
-                    ? 'fill-current' 
-                    : i < artisan.rating 
-                    ? 'fill-current opacity-50' 
+              <Star
+                key={i}
+                className={`w-[3px] h-[3px] ${
+                  i < Math.floor(artisan.rating)
+                    ? 'fill-current'
+                    : i < artisan.rating
+                    ? 'fill-current opacity-50'
                     : 'fill-none'
-                }`} 
+                }`}
               />
             ))}
           </div>
