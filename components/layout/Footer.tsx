@@ -139,15 +139,9 @@ const Footer = () => {
         <div style={responsiveGrid}>
           {/* Company Info */}
           <div>
-<<<<<<< HEAD
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">P</span>
-=======
             <div style={staticStyles.logoSection}>
               <div style={staticStyles.logoBox}>
                 <span style={{ color: 'white', fontWeight: 'bold', fontSize: '1.25rem' }}>P</span>
->>>>>>> 2f0859f (designs)
               </div>
               <span style={staticStyles.logoText}>ProbFixer</span>
             </div>

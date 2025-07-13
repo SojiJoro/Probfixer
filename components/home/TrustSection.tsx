@@ -33,22 +33,6 @@ const TrustSection = () => {
     }
   ]
 
-<<<<<<< HEAD
-  return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-=======
   // Static styles
   const staticStyles = {
     section: {
@@ -131,7 +115,6 @@ const TrustSection = () => {
       alignItems: 'center'
     }
   }
->>>>>>> 2f0859f (designs)
 
   // Dynamic styles
   const iconBoxStyle = (isHovered: boolean, gradient: string) => ({
@@ -188,14 +171,6 @@ const TrustSection = () => {
         {/* Features Grid */}
         <div style={responsiveFeaturesGrid}>
           {features.map((feature, index) => (
-<<<<<<< HEAD
-            <div key={index} className="text-center">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-6 h-6 text-purple-600" />
-                             </div>
-              <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-sm">{feature.description}</p>
-=======
             <div 
               key={index} 
               style={staticStyles.featureCard}
@@ -209,7 +184,6 @@ const TrustSection = () => {
               </div>
               <h3 style={staticStyles.featureTitle}>{feature.title}</h3>
               <p style={staticStyles.featureDescription}>{feature.description}</p>
->>>>>>> 2f0859f (designs)
             </div>
           ))}
         </div>

@@ -232,7 +232,6 @@ const PopularServices = () => {
               onMouseEnter={() => setHoveredService(service.id)}
               onMouseLeave={() => setHoveredService(null)}
             >
-<<<<<<< HEAD
               <div className="text-4xl mb-3">{service.icon}</div>
               <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors">
                 {service.name}
@@ -240,29 +239,6 @@ const PopularServices = () => {
               <p className="text-sm text-gray-500 mt-1">
                 {service.jobs.toLocaleString()} jobs
               </p>
-=======
-              {/* Background Gradient */}
-              <div style={backgroundGradientStyle(service.gradient, hoveredService === service.id)} />
-              
-              {/* Content */}
-              <div style={{ position: 'relative', zIndex: 10 }}>
-                <div style={serviceIconStyle(hoveredService === service.id)}>
-                  {service.icon}
-                </div>
-                <h3 style={staticStyles.serviceName}>
-                  {service.name}
-                </h3>
-                <p style={staticStyles.serviceDescription}>
-                  {service.description}
-                </p>
-                <div style={staticStyles.serviceStats}>
-                  <span style={staticStyles.jobCount}>
-                    {service.jobs.toLocaleString()} jobs
-                  </span>
-                  <ArrowRight style={arrowStyle(hoveredService === service.id)} />
-                </div>
-              </div>
->>>>>>> 2f0859f (designs)
             </button>
           ))}
         </div>

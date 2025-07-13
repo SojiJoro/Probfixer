@@ -180,32 +180,9 @@ const HowItWorks = () => {
 
         <div style={responsiveGrid}>
           {steps.map((step, index) => (
-<<<<<<< HEAD
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <step.icon className="w-8 h-8 text-purple-600" />
-=======
-            <div 
-              key={index} 
-              style={staticStyles.stepCard}
-              onMouseEnter={() => setHoveredStep(index)}
-              onMouseLeave={() => setHoveredStep(null)}
-            >
-              <div style={staticStyles.stepCard}>
-                {/* Icon Container */}
-                <div style={staticStyles.iconContainer}>
-                  <div style={iconBoxStyle(hoveredStep === index, step.gradient)}>
-                    <step.icon style={{ width: '2.5rem', height: '2.5rem', color: 'white' }} />
-                  </div>
-                  <div style={staticStyles.stepNumber}>
-                    <span style={staticStyles.stepNumberText}>{index + 1}</span>
-                  </div>
-                </div>
-
-                {/* Content */}
-                <h3 style={staticStyles.stepTitle}>{step.title}</h3>
-                <p style={staticStyles.stepDescription}>{step.description}</p>
->>>>>>> 2f0859f (designs)
               </div>
 
               {/* Arrow */}

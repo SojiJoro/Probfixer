@@ -256,23 +256,6 @@ const FeaturedArtisans = () => {
 
         <div style={gridStyle}>
           {artisans.map((artisan) => (
-<<<<<<< HEAD
-            <div key={artisan.id} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-6">
-              <div className="flex items-start gap-4 mb-4">
-                <img 
-                  src={artisan.image} 
-                  alt={artisan.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div className="flex-1">
-                  <h3 className="font-semibold text-lg">{artisan.name}</h3>
-                  <p className="text-sm text-gray-600">{artisan.service}</p>
-                  {artisan.verified && (
-                    <span className="inline-flex items-center text-xs text-purple-600 mt-1">
-                      ✓ Verified
-                    </span>
-                  )}
-=======
             <div 
               key={artisan.id} 
               style={cardStyle(hoveredCard === artisan.id)}
@@ -284,18 +267,9 @@ const FeaturedArtisans = () => {
                 <div style={staticStyles.trendingBadge}>
                   <TrendingUp style={{ width: '0.75rem', height: '0.75rem' }} />
                   Trending
->>>>>>> 2f0859f (designs)
                 </div>
               )}
 
-<<<<<<< HEAD
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`w-[3px] h-[3px] ${i < Math.floor(artisan.rating) ? 'fill-current' : ''}`} />
-                    ))}
-=======
               <div style={{ padding: '1.5rem' }}>
                 {/* Profile Header */}
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1rem' }}>
@@ -321,7 +295,6 @@ const FeaturedArtisans = () => {
                       <span style={{ fontSize: '0.875rem', fontWeight: '500', color: '#374151' }}>{artisan.rating}</span>
                       <span style={{ fontSize: '0.875rem', color: '#6b7280' }}>({artisan.reviews})</span>
                     </div>
->>>>>>> 2f0859f (designs)
                   </div>
                 </div>
 

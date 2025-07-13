@@ -271,32 +271,12 @@ const Hero = () => {
   }
 
   return (
-<<<<<<< HEAD
     <section className="bg-gradient-to-br from-purple-50 via-pink-50 to-white py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Find Trusted Artisans in{' '}
             <span className="text-purple-600">Minutes</span>
-=======
-    <section style={sectionStyle}>
-      <div style={{ position: 'absolute', inset: 0, zIndex: -10 }}>
-        <div style={{ ...blobStyle(0, { top: '5rem', left: '2.5rem' }), backgroundColor: '#c084fc' }} />
-        <div style={{ ...blobStyle(2, { top: '10rem', right: '2.5rem' }), backgroundColor: '#fde047' }} />
-        <div style={{ ...blobStyle(4, { bottom: '-2rem', left: '5rem' }), backgroundColor: '#f9a8d4' }} />
-      </div>
-
-      <div style={containerStyle}>
-        <div style={{ textAlign: 'center' as const, maxWidth: '80rem', margin: '0 auto' }}>
-          <div style={staticStyles.badge}>
-            <Sparkles style={{ width: '1rem', height: '1rem', color: '#2563eb' }} />
-            <span style={staticStyles.badgeText}>Nigeria's #1 Artisan Platform</span>
-          </div>
-
-          <h1 style={staticStyles.mainHeading}>
-            Find Trusted Artisans
-            <span style={staticStyles.gradientText}>In Minutes</span>
->>>>>>> 2f0859f (designs)
           </h1>
           
           <p style={staticStyles.subtitle}>
