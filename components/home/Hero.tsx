@@ -62,7 +62,6 @@ const Hero = () => {
 
   useAnimationStyles()
 
-  const isMobile = windowWidth ? windowWidth < 768 : false
   const isTablet = windowWidth ? windowWidth < 1024 : false
 
   const popularServices = [
