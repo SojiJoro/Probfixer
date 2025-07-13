@@ -175,26 +175,6 @@ const PopularServices = () => {
       : '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)'
   })
 
-  const backgroundGradientStyle = (gradient: string, isHovered: boolean) => ({
-    position: 'absolute' as const,
-    inset: 0,
-    background: gradient,
-    opacity: isHovered ? 0.1 : 0,
-    transition: 'opacity 0.3s ease'
-  })
-
-  const serviceIconStyle = (isHovered: boolean) => ({
-    ...staticStyles.serviceIcon,
-    transform: isHovered ? 'scale(1.1)' : 'scale(1)'
-  })
-
-  const arrowStyle = (isHovered: boolean) => ({
-    width: '1rem',
-    height: '1rem',
-    color: isHovered ? '#3b82f6' : '#9ca3af',
-    transform: isHovered ? 'translateX(4px)' : 'translateX(0)',
-    transition: 'all 0.3s ease'
-  })
 
   const viewAllButtonStyle = {
     ...staticStyles.viewAllButton,
