@@ -242,7 +242,7 @@ export default function Testimonials() {
                 </div>
                 
                 <p style={staticStyles.testimonialText}>
-                  "{testimonials[activeIndex].text}"
+                  &ldquo;{testimonials[activeIndex].text}&rdquo;
                 </p>
               </div>
             </div>
@@ -275,7 +275,7 @@ export default function Testimonials() {
                 </div>
                 
                 <p style={staticStyles.excerptText}>
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
                 
                 <p style={staticStyles.serviceTag}>{testimonial.service}</p>

@@ -1,7 +1,7 @@
 // components/home/TrustSection.tsx
 'use client'
 import { useState } from 'react'
-import { Shield, Clock, Award, Users, Star, CheckCircle } from 'lucide-react'
+import { Shield, Clock, Award, Users, Star } from 'lucide-react'
 
 const TrustSection = () => {
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
