@@ -1,121 +1,201 @@
+// components/layout/Footer.tsx
+'use client'
+import { useState } from 'react'
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 
 const Footer = () => {
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null)
+  const [hoveredSocial, setHoveredSocial] = useState<string | null>(null)
+
+  // Static styles
+  const staticStyles = {
+    footer: {
+      backgroundColor: '#111827',
+      color: 'white'
+    },
+    container: {
+      maxWidth: '1200px',
+      margin: '0 auto',
+      padding: '3rem 1rem'
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+      gap: '2rem'
+    },
+    logoSection: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.5rem',
+      marginBottom: '1rem'
+    },
+    logoBox: {
+      width: '2rem',
+      height: '2rem',
+      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+      borderRadius: '0.5rem',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    logoText: {
+      fontWeight: 'bold',
+      fontSize: '1.25rem'
+    },
+    description: {
+      color: '#9ca3af',
+      marginBottom: '1rem',
+      lineHeight: '1.6'
+    },
+    socialLinks: {
+      display: 'flex',
+      gap: '1rem'
+    },
+    sectionTitle: {
+      fontWeight: '600',
+      fontSize: '1.125rem',
+      marginBottom: '1rem'
+    },
+    linkList: {
+      display: 'flex',
+      flexDirection: 'column' as const,
+      gap: '0.5rem'
+    },
+    link: {
+      color: '#9ca3af',
+      textDecoration: 'none',
+      transition: 'color 0.3s ease'
+    },
+    bottomSection: {
+      borderTop: '1px solid #1f2937',
+      marginTop: '2rem',
+      paddingTop: '2rem',
+      textAlign: 'center' as const,
+      color: '#9ca3af'
+    }
+  }
+
+  // Dynamic styles
+  const linkStyle = (isHovered: boolean) => ({
+    ...staticStyles.link,
+    color: isHovered ? 'white' : '#9ca3af'
+  })
+
+  const socialLinkStyle = (isHovered: boolean) => ({
+    color: isHovered ? 'white' : '#9ca3af',
+    transition: 'color 0.3s ease',
+    cursor: 'pointer'
+  })
+
+  // Link sections data
+  const linkSections = [
+    {
+      title: 'For Customers',
+      links: [
+        { href: '/how-it-works', text: 'How it Works' },
+        { href: '/browse', text: 'Browse Artisans' },
+        { href: '/post-problem', text: 'Post a Problem' },
+        { href: '/pricing', text: 'Pricing' }
+      ]
+    },
+    {
+      title: 'For Artisans',
+      links: [
+        { href: '/artisan/join', text: 'Join as Pro' },
+        { href: '/artisan/benefits', text: 'Benefits' },
+        { href: '/artisan/resources', text: 'Resources' },
+        { href: '/artisan/success-stories', text: 'Success Stories' }
+      ]
+    },
+    {
+      title: 'Support',
+      links: [
+        { href: '/help', text: 'Help Center' },
+        { href: '/contact', text: 'Contact Us' },
+        { href: '/privacy', text: 'Privacy Policy' },
+        { href: '/terms', text: 'Terms of Service' }
+      ]
+    }
+  ]
+
+  const socialLinks = [
+    { name: 'facebook', icon: Facebook, href: '#' },
+    { name: 'twitter', icon: Twitter, href: '#' },
+    { name: 'instagram', icon: Instagram, href: '#' },
+    { name: 'linkedin', icon: Linkedin, href: '#' }
+  ]
+
+  // Responsive adjustments
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const responsiveGrid = {
+    ...staticStyles.grid,
+    gridTemplateColumns: isMobile ? '1fr' : 'repeat(4, 1fr)'
+  }
+
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer style={staticStyles.footer}>
+      <div style={staticStyles.container}>
+        <div style={responsiveGrid}>
           {/* Company Info */}
           <div>
+<<<<<<< HEAD
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">P</span>
+=======
+            <div style={staticStyles.logoSection}>
+              <div style={staticStyles.logoBox}>
+                <span style={{ color: 'white', fontWeight: 'bold', fontSize: '1.25rem' }}>P</span>
+>>>>>>> 2f0859f (designs)
               </div>
-              <span className="font-bold text-xl">ProbFixer</span>
+              <span style={staticStyles.logoText}>ProbFixer</span>
             </div>
-            <p className="text-gray-400 mb-4">
+            <p style={staticStyles.description}>
               Nigeria&apos;s trusted marketplace for home and office repairs.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+            <div style={staticStyles.socialLinks}>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  style={socialLinkStyle(hoveredSocial === social.name)}
+                  onMouseEnter={() => setHoveredSocial(social.name)}
+                  onMouseLeave={() => setHoveredSocial(null)}
+                  aria-label={`Visit our ${social.name} page`}
+                >
+                  <social.icon style={{ width: '1.25rem', height: '1.25rem' }} />
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* For Customers */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">For Customers</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/how-it-works" className="text-gray-400 hover:text-white transition-colors">
-                  How it Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/browse" className="text-gray-400 hover:text-white transition-colors">
-                  Browse Artisans
-                </Link>
-              </li>
-              <li>
-                <Link href="/post-problem" className="text-gray-400 hover:text-white transition-colors">
-                  Post a Problem
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* For Artisans */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">For Artisans</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/artisan/join" className="text-gray-400 hover:text-white transition-colors">
-                  Join as Pro
-                </Link>
-              </li>
-              <li>
-                <Link href="/artisan/benefits" className="text-gray-400 hover:text-white transition-colors">
-                  Benefits
-                </Link>
-              </li>
-              <li>
-                <Link href="/artisan/resources" className="text-gray-400 hover:text-white transition-colors">
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link href="/artisan/success-stories" className="text-gray-400 hover:text-white transition-colors">
-                  Success Stories
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4">Support</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/help" className="text-gray-400 hover:text-white transition-colors">
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* Link Sections */}
+          {linkSections.map((section, sectionIndex) => (
+            <div key={sectionIndex}>
+              <h4 style={staticStyles.sectionTitle}>{section.title}</h4>
+              <ul style={staticStyles.linkList}>
+                {section.links.map((link, linkIndex) => {
+                  const linkId = `${sectionIndex}-${linkIndex}`
+                  return (
+                    <li key={linkIndex} style={{ listStyle: 'none' }}>
+                      <Link
+                        href={link.href}
+                        style={linkStyle(hoveredLink === linkId)}
+                        onMouseEnter={() => setHoveredLink(linkId)}
+                        onMouseLeave={() => setHoveredLink(null)}
+                      >
+                        {link.text}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <div style={staticStyles.bottomSection}>
           <p>&copy; 2024 ProbFixer. All rights reserved. Made with ❤️ in Nigeria</p>
         </div>
       </div>
