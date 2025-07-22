@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation'
 
 const HowItWorks = () => {
   const router = useRouter()
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null)
   const [isButtonHovered, setIsButtonHovered] = useState(false)
 
   const steps = [
@@ -135,20 +134,6 @@ const HowItWorks = () => {
     }
   }
 
-  const iconBoxStyle = (isHovered: boolean, gradient: string) => ({
-    width: '5rem',
-    height: '5rem',
-    background: gradient,
-    borderRadius: '1rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transform: isHovered ? 'scale(1.1)' : 'scale(1)',
-    transition: 'all 0.3s ease',
-    boxShadow: isHovered 
-      ? '0 20px 25px -5px rgba(0, 0, 0, 0.2)' 
-      : '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
-  })
 
   const buttonStyle = {
     ...staticStyles.button,

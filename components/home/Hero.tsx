@@ -2,7 +2,7 @@
 'use client'
 
 import { useState, useMemo, useEffect } from 'react'
-import { Search, MapPin, Sparkles } from 'lucide-react'
+import { Search, MapPin } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 
 // Custom hook for window width (SSR safe)
@@ -62,7 +62,6 @@ const Hero = () => {
 
   useAnimationStyles()
 
-  const isMobile = windowWidth ? windowWidth < 768 : false
   const isTablet = windowWidth ? windowWidth < 1024 : false
 
   const popularServices = [
@@ -199,40 +198,11 @@ const Hero = () => {
     }
   }
 
-  const sectionStyle = useMemo(() => ({
-    position: 'relative' as const,
-    minHeight: '90vh',
-    display: 'flex',
-    alignItems: 'center',
-    padding: isMobile ? '3rem 0' : '5rem 0',
-    overflow: 'hidden'
-  }), [isMobile])
-
-  const containerStyle = useMemo(() => ({
-    position: 'relative' as const,
-    zIndex: 10,
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 1.5rem',
-    width: '100%'
-  }), [])
-
   const searchContainerStyle = useMemo(() => ({
     display: 'flex',
     flexDirection: isTablet ? 'column' as const : 'row' as const,
     gap: '0.75rem'
   }), [isTablet])
-
-  const blobStyle = (delay: number, position: { top?: string; bottom?: string; left?: string; right?: string }) => ({
-    position: 'absolute' as const,
-    width: isMobile ? '14rem' : '18rem',
-    height: isMobile ? '14rem' : '18rem',
-    borderRadius: '50%',
-    filter: 'blur(48px)',
-    opacity: 0.2,
-    animation: `float 20s ease-in-out ${delay}s infinite`,
-    ...position
-  })
 
   const serviceCardStyle = (isHovered: boolean) => ({
     position: 'relative' as const,
